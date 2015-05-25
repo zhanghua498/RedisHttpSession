@@ -10,7 +10,7 @@
 		<init-param>
 			<!-- Redis 服务地址 必须-->
 			<param-name>host</param-name>
-			<param-value>112.24.126.182;142.21.29.137</param-value>
+			<param-value>112.124.26.82;142.121.129.137</param-value>
 		</init-param>
 		<init-param>
 			<!-- Redis 服务端口 必须-->
