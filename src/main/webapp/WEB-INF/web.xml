@@ -13,7 +13,7 @@
 			<param-value>112.124.26.82;142.121.129.137</param-value>
 		</init-param>
 		<init-param>
-			<!-- Redis 服务端口 必须-->
+			<!-- Redis 服务端口 必须 (端口与上面的IP地址一一对应)-->
 			<param-name>port</param-name>
 			<param-value>6379;6379</param-value>
 		</init-param>
