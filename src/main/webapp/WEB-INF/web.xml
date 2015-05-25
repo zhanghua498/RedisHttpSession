@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>RedisSession</display-name>
+	<filter>
+		<filter-name>RedisSessionFilter</filter-name>
+		<filter-class>zh.redis.httpsession.RedisSessionFilter</filter-class>
+		<init-param>
+			<!-- Redis 服务地址 必须-->
+			<param-name>host</param-name>
+			<param-value>112.24.126.182;142.21.29.137</param-value>
+		</init-param>
+		<init-param>
+			<!-- Redis 服务端口 必须-->
+			<param-name>port</param-name>
+			<param-value>6379;6379</param-value>
+		</init-param>
+		<init-param>
+			<!-- Session过期时间（秒）可选 -->
+			<param-name>sessionTimeOut</param-name>
+			<param-value>1800</param-value>
+		</init-param>
+		<init-param>
+			<!-- 负载均衡策略 可选 -->
+			<param-name>loadBalanceClass</param-name>
+			<param-value>zh.redis.httpsession.DefaultRedisSessionLoadBalance</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>RedisSessionFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
